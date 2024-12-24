@@ -1,0 +1,295 @@
+/*
+ QUE NO SE PUEDA AGREGAR DOS VECES LA MISMA PELICULA
+*/
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(https://media.defense.gov/2024/May/16/2003466932/-1/-1/0/240516-D-AF999-1004.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: "Bungee Spice", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#buscador {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    width: 50%;
+    height: auto;
+}
+button.buscar{
+    width: 20%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+
+.movie-card {
+    width: 40%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    position: relative;
+    left: 30%;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-image: url(https://media.istockphoto.com/id/1354982067/vector/sky-starry-black-night-background-with-star-starry-galaxy-space-8bit-texture-in-flat-style.jpg?s=612x612&w=0&k=20&c=jg_rvaUBAvwbSyIWlRbIGSLf2JkqAehZ0HRfxA8X9VQ=);
+}
+
+.movie-card h2 {
+    color: white;
+    font-family: "Sigmar One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.movie-card h3 {
+    color: white;
+    font-family: "Sigmar One", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.movie-card p {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.pelicula {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster {
+    width: 50%;
+    height: auto;
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+}
+
+.carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 25vw;
+    background-color: white;
+    transition: right 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+    overflow-y: auto;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    background-image: url(https://media.defense.gov/2024/May/16/2003466932/-1/-1/0/240516-D-AF999-1004.JPG);
+}
+
+.carrito .movie-card {
+    width: 50%; 
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #f0f0f0;
+    margin-right:50%;
+    
+}
+
+.carrito .poster {
+    width: 50%; 
+    height: auto;
+    
+}
+
+.carrito h1 {
+    color: white;
+    font-family: "Sigmar One", serif;
+    font-weight: 10;
+    font-style: normal;
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+.carrito h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#carritoIcon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cart-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 60px;
+}
+
+
+
+button {
+    color: #141839;
+    width: 45%;
+    height: 4%;
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    cursor: pointer;
+    border-radius: 8%;
+    margin-top: 40px;
+}
+button.botonesEliminar{
+    width: 100%;
+    height: 35px;
+}
+button.botonDescargar{
+    width: 50%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+button#completarDescarga{
+    width: 60%;
+    height: 40px;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    background-color: #29224f;
+    transition: 0.7s;
+    color: aliceblue;
+}
+
+.carrito button {
+    font-size: 1rem;
+}
+
+.swal2-confirm {
+    width: 100%;
+    height: auto;
+}
+
+.swal2-cancel{
+    height: auto;
+}
+
+/* Media Queries para hacer el CSS responsive */
+@media (max-width: 1200px) {
+    .movie-card {
+        width: 50%;
+        left: 25%;
+    }
+
+    #busqueda {
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .movie-card {
+        width: 60%;
+        left: 20%;
+    }
+
+    #busqueda {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-card {
+        width: 80%;
+        left: 10%;
+    }
+
+    #busqueda {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .movie-card {
+        width: 100%;
+        left: 0;
+    }
+
+    #busqueda {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
